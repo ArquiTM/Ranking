@@ -8,4 +8,3 @@ C:\Projetos\Intelitrader\Desafio4\Desafio4\obj\Debug\netcoreapp2.0\Desafio4.Asse
 C:\Projetos\Intelitrader\Desafio4\Desafio4\obj\Debug\netcoreapp2.0\Desafio4.AssemblyInfo.cs
 C:\Projetos\Intelitrader\Desafio4\Desafio4\obj\Debug\netcoreapp2.0\Desafio4.dll
 C:\Projetos\Intelitrader\Desafio4\Desafio4\obj\Debug\netcoreapp2.0\Desafio4.pdb
-C:\Projetos\Intelitrader\Desafio4\Desafio4\obj\Debug\netcoreapp2.0\Desafio4.csprojAssemblyReference.cache

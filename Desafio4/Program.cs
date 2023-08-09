@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace uDemy
@@ -12,8 +14,8 @@ namespace uDemy
 
             try
             {
+                Dictionary<string, int> myDict = new Dictionary<string, int> { };
                 string[] file = File.ReadAllLines(@"ranking.txt");
-                string[,] mat = new string[26, 2];
                 string sTemp = string.Empty;
 
                 int countIgual = 1;
@@ -23,10 +25,11 @@ namespace uDemy
                 foreach (string s in file)
                 {
                     sTemp += s;
-
                 }
                 sTemp = sTemp.Replace(" ", "");
+
                 char[] v = sTemp.ToCharArray();
+                string[,] mat = new string[v.Length, 2];
 
                 for (int i = 0; i < v.Length; i++)
                 {
@@ -47,15 +50,15 @@ namespace uDemy
                         mat[countM, 0] = v[i].ToString();
                         mat[countM, 1] = countIgual.ToString();
                         countM++;
+                        myDict.Add(v[i].ToString(), countIgual);
                     }
                     status = true;
                     countIgual = 1;
                 }
 
-                for (int i = 0; i < v.Length; i++)
+                foreach (KeyValuePair<string, int> item in myDict.OrderByDescending(key => key.Value))
                 {
-                    if (mat[i, 0] != null)
-                        Console.WriteLine(mat[i, 0] + " = " + mat[i, 1]);
+                    Console.WriteLine((item));
                 }
             }
             catch (Exception ex)
